@@ -14,88 +14,36 @@
       margin: 0;
       padding: 20px;
     }
-
     h1, h2, h3 {
       color: #00ffff;
       text-shadow: 0 0 8px #00ffff;
       font-weight: bold;
     }
-
     a {
       color: #00ffff;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
     p, li {
       color: #d0d0d0;
       font-size: 1rem;
     }
-
     footer {
       color: #888;
       font-size: 0.9rem;
       text-align: center;
       margin-top: 40px;
     }
-
-    nav {
-      background-color: #000;
-      padding: 10px;
-      border-bottom: 2px solid #00ffff;
-      margin-bottom: 20px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav a {
-      color: #00ffff;
-      font-weight: bold;
-      text-decoration: none;
-      transition: color 0.2s ease-in-out;
-    }
-
-    nav a:hover {
-      color: #ffffff;
-    }
-
-    .project-card {
-      border: 1px solid #00ffff;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 8px;
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .project-card:hover {
-      transform: scale(1.03);
+    img.sigil {
+      max-width: 200px;
+      margin-top: 10px;
       box-shadow: 0 0 10px #00ffff;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#mission">Mission</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#statement">Statement</a></li>
-      <li><a href="mycroft.html">Mycroft</a></li>
-      <li><a href="study-plan.html">Study Plan</a></li>
-      <li><a href="red-team-sim.html">Red Team Sim</a></li>
-      <li><a href="slimmOS.html">slimmOS</a></li>
-    </ul>
-  </nav>
-
   <header>
     <h1>Cyberslimm</h1>
     <p>Creative cybersecurity through simulation, storytelling, and ethical rigor.</p>
@@ -103,51 +51,61 @@
 
   <section id="about">
     <h2>🧠 About Me</h2>
-    <p>
-      I value fairness, accountability, and community protection—and I bring that energy into every incident response, system audit, and security strategy I touch. Whether I’m documenting results for future adaptation or calmly navigating high-pressure threats, I operate with clarity, purpose, and outside-the-box thinking. I’m not just ahead of the curve—I bend it. Welcome to the Cyberslimm era.
-    </p>
+    <p>I value fairness, accountability, and community protection—and I bring that energy into every incident response, system audit, and security strategy I touch. Whether I’m documenting results for future adaptation or calmly navigating high-pressure threats, I operate with clarity, purpose, and outside-the-box thinking. I’m not just ahead of the curve—I bend it. Welcome to the Cyberslimm era.</p>
   </section>
 
   <section id="mission">
-    <div style="border: 2px solid #00ffff; padding: 20px; border-radius: 10px; box-shadow: 0 0 12px #00ffff;">
-      <h2>🎯 Mission Statement</h2>
-      <p>
-        My mission is to build a legacy through cybersecurity—creating opportunities first for posterity, and second, serving as an example of what’s possible when drive, creativity, and resilience come together. I don’t just study threats—I simulate the impossible.
-      </p>
-    </div>
+    <h2>🎯 Mission Statement</h2>
+    <p>My mission is to build a legacy through cybersecurity—creating opportunities first for posterity, and second, serving as an example of what’s possible when drive, creativity, and resilience come together. I don’t just study threats—I simulate the impossible.</p>
   </section>
 
   <section id="projects">
     <h2>🚀 Project Highlights</h2>
-    <div class="project-card">
-      <h3>Mycroft + Ubuntu Integration</h3>
-      <p>Voice assistant deployment on hardened Ubuntu, showcasing secure configuration, privacy-first design, and real-world Linux skills.</p>
-    </div>
-    <div class="project-card">
-      <h3>Security+ Prep Sprint</h3>
-      <p>Structured study plan with mock exams, reflections, and certification goals.</p>
-    </div>
-    <div class="project-card">
-      <h3>Red Team Simulation</h3>
-      <p>A permission-based engagement designed to showcase ethical hacking, threat modeling, and incident response strategy.</p>
-    </div>
-    <div class="project-card">
-      <h3>slimmOS (Akkorokamui)</h3>
-      <p>A separate systems project focused on presence logic and emotional computation. Currently in development; not part of cybersecurity portfolio.</p>
-    </div>
+    <ul>
+      <li><strong>Security+ Prep Sprint</strong> — Structured study plan with mock exams, reflections, and certification goals.</li>
+      <li><strong>Red Team Simulation</strong> — A permission-based engagement designed to showcase ethical hacking, threat modeling, and incident response strategy.</li>
+      <li><strong>slimmOS (Akkorokamui)</strong> — A separate systems project focused on presence logic and emotional computation. Currently in development; not part of cybersecurity portfolio.</li>
+    </ul>
+  </section>
+
+  <section id="study-plan">
+    <h2>📘 Security+ Study Plan</h2>
+    <p>This sprint was designed to maximize retention and readiness for the Security+ exam. It included:</p>
+    <ul>
+      <li>Daily topic breakdowns (e.g., threat types, risk management, cryptography)</li>
+      <li>Mock exams and flashcard reviews</li>
+      <li>Reflection logs to track confidence and gaps</li>
+      <li>Integration with Cyberslimm branding for motivation and consistency</li>
+    </ul>
+    <p>Outcome: A structured, repeatable framework for future certification sprints.</p>
+  </section>
+
+  <section id="red-team-roadmap">
+    <h2>🧨 Red Team Simulation Roadmap</h2>
+    <p>This permission-based simulation is designed to demonstrate ethical hacking and incident response in a controlled environment. Key phases:</p>
+    <ol>
+      <li><strong>Recon & Planning</strong> — Define scope, gather intelligence, and simulate threat actor behavior.</li>
+      <li><strong>Initial Access</strong> — Use ethical techniques to breach mock perimeter defenses.</li>
+      <li><strong>Persistence & Escalation</strong> — Simulate lateral movement and privilege escalation.</li>
+      <li><strong>Exfiltration & Reporting</strong> — Document findings, mitigation strategies, and lessons learned.</li>
+    </ol>
+    <p>All actions are logged, reviewed, and aligned with Cyberslimm’s ethical standards.</p>
+  </section>
+
+  <section id="slimmos">
+    <h2>🧿 slimmOS (Akkorokamui)</h2>
+    <p>A separate systems project focused on presence logic and emotional computation. Currently in development; not part of cybersecurity portfolio.</p>
+    <img src="images/sigil.png" alt="slimmOS Sigil" class="sigil" />
   </section>
 
   <section id="statement">
     <h2>📜 Professional Statement</h2>
-    <p>
-      I’m a cybersecurity professional with a systems-oriented mindset and a passion for protecting digital environments. My strengths in Linux hardening, Python scripting, and structured problem-solving give me the flexibility to adapt faster than anyone I know. I don’t chase threats—I outmaneuver them.
-    </p>
+    <p>I’m a cybersecurity professional with a systems-oriented mindset and a passion for protecting digital environments. My strengths in Linux hardening, Python scripting, and structured problem-solving give me the flexibility to adapt faster than anyone I know. I don’t chase threats—I outmaneuver them.</p>
     <p><strong>Welcome to the Cyberslimm era.</strong></p>
   </section>
 
   <footer>
     <p>© 2025 Cyberslimm. Built with grit, humor, and a Red Team mindset.</p>
-    <p style="font-style: italic; color: #00ffff;">Outmaneuver the threat. Simulate the impossible.</p>
   </footer>
 </body>
 </html>
