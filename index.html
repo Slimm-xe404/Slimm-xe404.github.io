@@ -1,111 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cyberslimm Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>CyberSlimm</title>
   <style>
     body {
       background-color: #000;
-      color: #d0d0d0;
-      font-family: 'Segoe UI', 'Roboto', sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 20px;
-    }
-    h1, h2, h3 {
       color: #00ffff;
-      text-shadow: 0 0 8px #00ffff;
-      font-weight: bold;
-    }
-    a {
-      color: #00ffff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    p, li {
-      font-size: 1rem;
-    }
-    footer {
-      color: #888;
-      font-size: 0.9rem;
+      font-family: 'Courier New', Courier, monospace;
       text-align: center;
-      margin-top: 40px;
-    }
-    img.sigil {
-      max-width: 200px;
-      margin-top: 10px;
-      box-shadow: 0 0 10px #00ffff;
-    }
-
-    /* Dropdown Nav Styles */
-    nav {
-      margin-bottom: 30px;
-    }
-    .navbar {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      padding: 0;
-    }
-    .navbar li {
-      position: relative;
-    }
-    .navbar a {
-      color: #00ffff;
-      font-weight: bold;
-      padding: 10px;
-      display: block;
-    }
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #000;
-      border: 1px solid #00ffff;
-      box-shadow: 0 0 10px #00ffff;
-      list-style: none;
-      padding: 0;
       margin: 0;
-      z-index: 1000;
+      padding: 0;
     }
-    .dropdown li a {
-      padding: 10px;
-      white-space: nowrap;
+    header {
+      margin-top: 100px;
     }
-    .navbar li:hover .dropdown {
-      display: block;
+    nav {
+      margin-top: 50px;
+    }
+    button {
+      background-color: #111;
+      color: #00ffff;
+      border: 1px solid #00ffff;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    section {
+      display: none;
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: left;
+      padding: 20px;
+      border: 1px solid #00ffff;
+      background-color: #111;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Cyberslimm</h1>
-    <p>Creative cybersecurity through simulation, storytelling, and ethical rigor.</p>
+    <h1>CyberSlimm</h1>
+    <p>— you feel me?</p>
   </header>
 
   <nav>
-    <ul class="navbar">
-      <li><a href="#about">About</a></li>
-      <li>
-        <a href="#mission">Mission</a>
-        <ul class="dropdown">
-          <li><a href="#statement">Professional Statement</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#projects">Projects</a>
-        <ul class="dropdown">
-          <li><a href="#study-plan">Security+ Sprint</a></li>
-          <li><a href="#red-team-roadmap">Red Team Sim</a></li>
-          <li><a href="#slimmos">slimmOS</a></li>
-        </ul>
-      </li>
-    </ul>
+    <button onclick="toggleSection('about')">About</button>
+    <button onclick="toggleSection('mission')">Mission</button>
+    <button onclick="toggleSection('projects')">Projects</button>
+    <button onclick="toggleSection('study-plan')">Security+ Sprint</button>
+    <button onclick="toggleSection('red-team-roadmap')">Red Team</button>
+    <button onclick="toggleSection('slimmos')">slimmOS</button>
+    <button onclick="toggleSection('statement')">Statement</button>
   </nav>
 
   <section id="about">
@@ -136,35 +83,37 @@
       <li>Reflection logs to track confidence and gaps</li>
       <li>Integration with Cyberslimm branding for motivation and consistency</li>
     </ul>
-    <p>Outcome: A structured, repeatable framework for future certification sprints.</p>
+    <p><strong>Outcome:</strong> A structured, repeatable framework for future certification sprints.</p>
   </section>
 
   <section id="red-team-roadmap">
     <h2>🧨 Red Team Simulation Roadmap</h2>
-    <p>This permission-based simulation is designed to demonstrate ethical hacking and incident response in a controlled environment. Key phases:</p>
-    <ol>
+    <p>This permission-based simulation is designed to demonstrate ethical hacking and incident response in a controlled environment.</p>
+    <ul>
       <li><strong>Recon & Planning</strong> — Define scope, gather intelligence, and simulate threat actor behavior.</li>
       <li><strong>Initial Access</strong> — Use ethical techniques to breach mock perimeter defenses.</li>
       <li><strong>Persistence & Escalation</strong> — Simulate lateral movement and privilege escalation.</li>
       <li><strong>Exfiltration & Reporting</strong> — Document findings, mitigation strategies, and lessons learned.</li>
-    </ol>
+    </ul>
     <p>All actions are logged, reviewed, and aligned with Cyberslimm’s ethical standards.</p>
   </section>
 
   <section id="slimmos">
     <h2>🧿 slimmOS (Akkorokamui)</h2>
     <p>A separate systems project focused on presence logic and emotional computation. Currently in development; not part of cybersecurity portfolio.</p>
-    <img src="images/sigil.png" alt="slimmOS Sigil" class="sigil" />
   </section>
 
   <section id="statement">
     <h2>📜 Professional Statement</h2>
-    <p>I’m a cybersecurity professional with a systems-oriented mindset and a passion for protecting digital environments. My strengths in Linux hardening, Python scripting, and structured problem-solving give me the flexibility to adapt faster than anyone I know. I don’t chase threats—I outmaneuver them.</p>
-    <p><strong>Welcome to the Cyberslimm era.</strong></p>
+    <p>I’m a cybersecurity professional with a systems-oriented mindset and a passion for protecting digital environments. My strengths in Linux hardening, Python scripting, and structured problem-solving give me the flexibility to adapt faster than anyone I know. I don’t chase threats—I outmaneuver them. Welcome to the Cyberslimm era.</p>
   </section>
 
-  <footer>
-    <p>© 2025 Cyberslimm. Built with grit, humor, and a Red Team mindset.</p>
-  </footer>
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.style.display = section.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
 </body>
 </html>
