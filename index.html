@@ -18,23 +18,32 @@
     nav {
       margin-top: 50px;
     }
-    button {
+    .navbar {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+    }
+    .navbar li {
       background-color: #111;
-      color: #00ffff;
       border: 1px solid #00ffff;
       padding: 10px 20px;
-      margin: 5px;
       cursor: pointer;
-      font-size: 1em;
     }
     section {
       display: none;
-      margin: 40px auto;
+      margin: 20px auto;
       max-width: 800px;
       text-align: left;
       padding: 20px;
       border: 1px solid #00ffff;
-      background-color: #111;
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+    img.sigil {
+      max-width: 200px;
+      margin-top: 10px;
+      box-shadow: 0 0 10px #00ffff;
     }
   </style>
 </head>
@@ -42,17 +51,19 @@
 
   <header>
     <h1>CyberSlimm</h1>
-    <p>—Assimilation Stimulation</p>
+    <p>Assimulation Stimulation</p>
   </header>
 
   <nav>
-    <button onclick="toggleSection('about')">About</button>
-    <button onclick="toggleSection('mission')">Mission</button>
-    <button onclick="toggleSection('projects')">Projects</button>
-    <button onclick="toggleSection('study-plan')">Security+ Sprint</button>
-    <button onclick="toggleSection('red-team-roadmap')">Red Team</button>
-    <button onclick="toggleSection('slimmos')">slimmOS</button>
-    <button onclick="toggleSection('statement')">Statement</button>
+    <ul class="navbar">
+      <li onmouseover="showSection('about')" onmouseout="hideSection('about')">About</li>
+      <li onmouseover="showSection('mission')" onmouseout="hideSection('mission')">Mission</li>
+      <li onmouseover="showSection('projects')" onmouseout="hideSection('projects')">Projects</li>
+      <li onmouseover="showSection('study-plan')" onmouseout="hideSection('study-plan')">Security+ Sprint</li>
+      <li onmouseover="showSection('red-team-roadmap')" onmouseout="hideSection('red-team-roadmap')">Red Team</li>
+      <li onmouseover="showSection('slimmos')" onmouseout="hideSection('slimmos')">slimmOS</li>
+      <li onmouseover="showSection('statement')" onmouseout="hideSection('statement')">Statement</li>
+    </ul>
   </nav>
 
   <section id="about">
@@ -101,6 +112,7 @@
   <section id="slimmos">
     <h2>🧿 slimmOS (Akkorokamui)</h2>
     <p>A separate systems project focused on presence logic and emotional computation. Currently in development; not part of cybersecurity portfolio.</p>
+    <img src="images/sigil.png" alt="slimmOS Sigil" class="sigil" />
   </section>
 
   <section id="statement">
@@ -109,9 +121,11 @@
   </section>
 
   <script>
-    function toggleSection(id) {
-      const section = document.getElementById(id);
-      section.style.display = section.style.display === 'none' ? 'block' : 'none';
+    function showSection(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function hideSection(id) {
+      document.getElementById(id).style.display = 'none';
     }
   </script>
 
