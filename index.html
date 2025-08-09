@@ -1,80 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>CyberSlimm — Assimilation Stimulation</title>
+  <meta charset="UTF-8">
+  <title>CyberSlimm</title>
   <style>
     body {
       background-color: #000;
       color: #00ffff;
-      font-family: 'Courier New', monospace;
+      font-family: 'Courier New', Courier, monospace;
       text-align: center;
-      padding: 40px;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
+    header {
+      margin-top: 100px;
     }
-    .nav {
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 0;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 5px;
+      color: #00ffff;
+    }
+    nav {
+      margin-top: 50px;
+    }
+    .navbar {
+      list-style: none;
       display: flex;
       justify-content: center;
-      gap: 30px;
-      margin-bottom: 40px;
+      gap: 20px;
+      padding: 0;
     }
-    .nav-item {
-      position: relative;
-      cursor: pointer;
-    }
-    .reveal {
-      display: none;
-      position: absolute;
-      top: 30px;
-      left: 0;
+    .navbar li {
       background-color: #111;
-      color: #00ffff;
-      padding: 10px;
-      width: 300px;
-      text-align: left;
       border: 1px solid #00ffff;
-      z-index: 10;
+      padding: 10px 20px;
+      cursor: pointer;
+      position: relative;
     }
-    .nav-item:hover .reveal {
-      display: block;
+    section {
+      display: none;
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: left;
+      padding: 20px;
+      border: 1px solid #00ffff;
+      background-color: rgba(0, 0, 0, 0.85);
     }
-    a {
-      color: #00ffff;
-      text-decoration: underline;
+    img.sigil {
+      max-width: 200px;
+      margin-top: 10px;
+      box-shadow: 0 0 10px #00ffff;
     }
   </style>
 </head>
 <body>
-  <h1>CyberSlimm — Assimilation Stimulation</h1>
-  <div class="nav">
-    <div class="nav-item">🧠 About
-      <div class="reveal">CyberSlimm is a mythic simulation of adaptive strategy, ethical hacking, and creative rigor.</div>
-    </div>
-    <div class="nav-item">🎯 Mission
-      <div class="reveal">Build legacy through simulation, storytelling, and cybersecurity mastery.</div>
-    </div>
-    <div class="nav-item">🚀 Projects
-      <div class="reveal">
-        <ul>
-          <li><strong>Mycroft + Ubuntu:</strong> Voice assistant deployed with instructions.</li>
-          <li><strong>Red Team Simulation:</strong> <a href="red-team.html">Permission-based roadmap</a>.</li>
-          <li><strong>slimmOS (Akkorokamui):</strong> Mythic OS branding, lightly referenced.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="nav-item">🔐 Security+ Sprint
-      <div class="reveal">
-        Structured study sprint with daily breakdowns, mock exams, and reflection logs.<br>
-        <a href="security-plan.html">View full plan</a>
-      </div>
-    </div>
-    <div class="nav-item">🦊 Statement
-      <div class="reveal">Fox energy: strategic, adaptive, and always iterating. Every project is a living simulation.</div>
-    </div>
-  </div>
-  <footer>© CyberSlimm 2025</footer>
+
+  <header>
+    <h1>CyberSlimm</h1>
+    <p>Assimilation Stimulation</p>
+  </header>
+
+  <nav>
+    <ul class="navbar">
+      <li onmouseover="showSection('about')" onmouseout="hideSection('about')">About</li>
+      <li onmouseover="showSection('mission')" onmouseout="hideSection('mission')">Mission</li>
+      <li onmouseover="showSection('projects')" onmouseout="hideSection('projects')">Projects</li>
+      <li onmouseover="showSection('study-plan')" onmouseout="hideSection('study-plan')">Security+ Sprint</li>
+      <li onmouseover="showSection('red-team-roadmap')" onmouseout="hideSection('red-team-roadmap')">Red Team</li>
+      <li onmouseover="showSection('slimmos')" onmouseout="hideSection('slimmos')">slimmOS</li>
+      <li onmouseover="showSection('statement')" onmouseout="hideSection('statement')">Statement</li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>🧠 About Me</h2>
+    <p>I value fairness, accountability, and community protection—and I bring that energy into every incident response, system audit, and security strategy I touch. Whether I’m documenting results for future adaptation or calmly navigating high-pressure threats, I operate with clarity, purpose, and outside-the-box thinking. I’m not just ahead of the curve—I bend it. Welcome to the Cyberslimm era.</p>
+  </section>
+
+  <section id="mission">
+    <h2>🎯 Mission Statement</h2>
+    <p>My mission is to build a legacy through cybersecurity—creating opportunities first for posterity, and second, serving as an example of what’s possible when drive, creativity, and resilience come together. I don’t just study threats—I simulate the impossible.</p>
+  </section>
+
+  <section id="projects">
+    <h2>🚀 Project Highlights</h2>
+    <ul>
+      <li><strong>Security+ Prep Sprint</strong> — Structured study plan with mock exams, reflections, and certification goals.</li>
+      <li><strong>Red Team Simulation</strong> — A permission-based engagement designed to showcase ethical hacking, threat modeling, and incident response strategy.</li>
+      <li><strong>slimmOS (Akkorokamui)</strong> — A separate systems project focused on presence logic and emotional computation. Currently in development; not part of cybersecurity portfolio.</li>
+      <li><strong>Mycroft + Ubuntu Integration</strong> — Voice assistant deployed on hardened Ubuntu. <a href="mycroft.html">View instructions</a></li>
+    </ul>
+  </section>
+
+  <section id="study-plan">
+    <h2>📘 Security+ Study Plan</h2>
+    <p>This sprint was designed to maximize retention and readiness for the Security+ exam. It included:</p>
+    <ul>
+      <li>Daily topic breakdowns (e.g., threat types, risk management, cryptography)</li>
+      <li>Mock exams and flashcard reviews</li>
+      <li>Reflection logs to track confidence and gaps</li>
+      <li>Integration with Cyberslimm branding for motivation and consistency</li>
+    </ul>
+    <p><strong>Outcome:</strong> A structured, repeatable framework for future certification sprints. <a href="security-plan.html">View full plan</a></p>
+  </section>
+
+  <section id="red-team-roadmap">
+    <h2>🧨 Red Team Simulation Roadmap</h2>
+    <p>This permission-based simulation is designed to demonstrate ethical hacking and incident response in a controlled environment.</p>
+    <ul>
+      <li><strong>Recon & Planning</strong> — Define scope, gather intelligence, and simulate threat actor behavior.</li>
+      <li><strong>Initial Access</strong> — Use ethical techniques to breach mock perimeter defenses.</li>
+      <li><strong>Persistence & Escalation</strong> — Simulate lateral movement and privilege escalation.</li>
+      <li><strong>Exfiltration & Reporting</strong> — Document findings, mitigation strategies, and lessons learned.</li>
+    </ul>
+    <p><strong>Permission Slip:</strong> This simulation is not reckless—it’s a ritual. I choose to do this because I want to measure my vessel. People say things are impossible. I refuse to believe the impossible. I simulate the improbable to prove the inevitable.</p>
+  </section>
+
+  <section id="slimmos">
+    <h2>🧿 slimmOS (Akkorokamui)</h2>
+    <p>A separate systems project focused on presence logic and emotional computation. Currently in development; not part of cybersecurity portfolio.</p>
+    <img src="images/sigil.png" alt="slimmOS Sigil" class="sigil" />
+  </section>
+
+  <section id="statement">
+    <h2>📜 Professional Statement</h2>
+    <p>I’m a cybersecurity professional with a systems-oriented mindset and a passion for protecting digital environments. My strengths in Linux hardening, Python scripting, and structured problem-solving give me the flexibility to adapt faster than anyone I know. I don’t chase threats—I outmaneuver them. Welcome to the Cyberslimm era.</p>
+  </section>
+
+  <script>
+    function showSection(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function hideSection(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+
 </body>
 </html>
