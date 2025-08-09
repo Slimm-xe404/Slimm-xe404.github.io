@@ -6,43 +6,55 @@
   <title>Cyberslimm Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-  body {
-    background-color: #000000;
-    color: #d0d0d0;
-    font-family: 'Segoe UI', 'Roboto', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-  }
+    body {
+      background-color: #000000;
+      color: #d0d0d0;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
 
-  h1, h2, h3 {
-    color: #00ffff;
-    text-shadow: 0 0 8px #00ffff;
-    font-weight: bold;
-  }
+    h1, h2, h3 {
+      color: #00ffff;
+      text-shadow: 0 0 8px #00ffff;
+      font-weight: bold;
+    }
 
-  a {
-    color: #00ffff;
-    text-decoration: none;
-  }
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
+    a:hover {
+      text-decoration: underline;
+    }
 
-  p, li {
-    color: #d0d0d0;
-    font-size: 1rem;
-  }
+    p, li {
+      color: #d0d0d0;
+      font-size: 1rem;
+    }
 
-  footer {
-    color: #888;
-    font-size: 0.9rem;
-    text-align: center;
-    margin-top: 40px;
-  }
-</style>
+    footer {
+      color: #888;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 40px;
+    }
 
+    .project-card {
+      border: 1px solid #00ffff;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 10px #00ffff;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -58,19 +70,28 @@
   </section>
 
   <section id="mission">
-    <h2>🎯 Mission Statement</h2>
-    <p>
-      My mission is to build a legacy through cybersecurity—creating opportunities first for posterity, and second, serving as an example of what’s possible when drive, creativity, and resilience come together. I don’t just study threats—I simulate the impossible.
-    </p>
+    <div style="border: 2px solid #00ffff; padding: 20px; border-radius: 10px; box-shadow: 0 0 12px #00ffff;">
+      <h2>🎯 Mission Statement</h2>
+      <p>
+        My mission is to build a legacy through cybersecurity—creating opportunities first for posterity, and second, serving as an example of what’s possible when drive, creativity, and resilience come together. I don’t just study threats—I simulate the impossible.
+      </p>
+    </div>
   </section>
 
   <section id="projects">
     <h2>🚀 Project Highlights</h2>
-    <ul>
-      <li><strong>Security+ Prep Sprint</strong> — Structured study plan with mock exams, reflections, and certification goals.</li>
-      <li><strong>Red Team Simulation</strong> — A permission-based engagement designed to showcase ethical hacking, threat modeling, and incident response strategy.</li>
-      <li><strong>slimmOS (Akkorokamui)</strong> — A separate systems project focused on presence logic and emotional computation. Currently in development; not part of cybersecurity portfolio.</li>
-    </ul>
+    <div class="project-card">
+      <h3>Security+ Prep Sprint</h3>
+      <p>Structured study plan with mock exams, reflections, and certification goals.</p>
+    </div>
+    <div class="project-card">
+      <h3>Red Team Simulation</h3>
+      <p>A permission-based engagement designed to showcase ethical hacking, threat modeling, and incident response strategy.</p>
+    </div>
+    <div class="project-card">
+      <h3>slimmOS (Akkorokamui)</h3>
+      <p>A separate systems project focused on presence logic and emotional computation. Currently in development; not part of cybersecurity portfolio.</p>
+    </div>
   </section>
 
   <section id="statement">
@@ -83,6 +104,7 @@
 
   <footer>
     <p>© 2025 Cyberslimm. Built with grit, humor, and a Red Team mindset.</p>
+    <p style="font-style: italic; color: #00ffff;">Outmaneuver the threat. Simulate the impossible.</p>
   </footer>
 </body>
 </html>
