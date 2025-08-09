@@ -2,86 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CyberSlimm — Assimilation Stimulation</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #000;
+      color: #00ffff;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    .nav-item {
+      position: relative;
+      cursor: pointer;
+    }
+    .reveal {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background-color: #111;
+      color: #00ffff;
+      padding: 10px;
+      width: 300px;
+      text-align: left;
+      border: 1px solid #00ffff;
+      z-index: 10;
+    }
+    .nav-item:hover .reveal {
+      display: block;
+    }
+    a {
+      color: #00ffff;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>CyberSlimm</h1>
-    <p>Assimilation Stimulation</p>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#mission">Mission</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#security">Security+ Sprint</a></li>
-      <li><a href="#redteam">Red Team</a></li>
-      <li><a href="#slimmos">slimmOS</a></li>
-      <li><a href="#statement">Statement</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section id="about">
-      <h2>🧠 About</h2>
-      <p>CyberSlimm is a mythic simulation of adaptive strategy, ethical hacking, and creative rigor.</p>
-    </section>
-
-    <section id="mission">
-      <h2>🎯 Mission</h2>
-      <p>To build legacy through simulation, storytelling, and cybersecurity mastery.</p>
-    </section>
-
-    <section id="projects">
-      <h2>🚀 Project Highlights</h2>
-      <ul>
-        <li><a href="mycroft.html">Mycroft + Ubuntu Integration</a> — Finished voice assistant deployment with published instructions.</li>
-        <li><a href="red-team.html">Red Team Simulation</a> — Permission-based ethical hacking roadmap.</li>
-        <li><a href="slimmOS.html">slimmOS (Akkorokamui)</a> — Referenced lightly, never exposed. Mythic OS branding.</li>
-      </ul>
-    </section>
-
-    <section id="security">
-      <h2>🔐 Security+ Sprint</h2>
-      <p>This sprint was designed to maximize retention and readiness for the Security+ exam. It included:</p>
-      <ul>
-        <li>Daily topic breakdowns (e.g., threat types, risk management, cryptography)</li>
-        <li>Mock exams and flashcard reviews</li>
-        <li>Reflection logs to track confidence and gaps</li>
-        <li>Integration with Cyberslimm branding for motivation and consistency</li>
-      </ul>
-      <p><strong>Outcome:</strong> A structured, repeatable framework for future certification sprints. <a href="security-plan.html">View full plan</a></p>
-    </section>
-
-    <section id="redteam">
-      <h2>🕵️ Red Team Simulation</h2>
-      <p>This permission-based simulation is designed to demonstrate ethical hacking and incident response in a controlled environment.</p>
-      <ul>
-        <li><strong>Recon & Planning</strong> — Define scope, gather intelligence, and simulate threat actor behavior.</li>
-        <li><strong>Initial Access</strong> — Use ethical techniques to breach mock perimeter defenses.</li>
-        <li><strong>Persistence & Escalation</strong> — Simulate lateral movement and privilege escalation.</li>
-        <li><strong>Exfiltration & Reporting</strong> — Document findings, mitigation strategies, and lessons learned.</li>
-      </ul>
-      <p><strong>Permission Slip:</strong> This simulation is not reckless—it’s a ritual. I choose to do this because I want to measure my vessel. People say things are impossible. I refuse to believe the impossible. I simulate the improbable to prove the inevitable.</p>
-    </section>
-
-    <section id="slimmos">
-      <h2>🐙 slimmOS (Akkorokamui)</h2>
-      <img src="images/sigil.png" alt="slimmOS Sigil" width="200" />
-      <p>Ongoing OS project—referenced lightly, never exposed. Mythic branding and modular design.</p>
-    </section>
-
-    <section id="statement">
-      <h2>🦊 Statement</h2>
-      <p>Fox energy: strategic, adaptive, and always iterating. Every project is a living simulation.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© CyberSlimm 2025</p>
-  </footer>
+  <h1>CyberSlimm — Assimilation Stimulation</h1>
+  <div class="nav">
+    <div class="nav-item">🧠 About
+      <div class="reveal">CyberSlimm is a mythic simulation of adaptive strategy, ethical hacking, and creative rigor.</div>
+    </div>
+    <div class="nav-item">🎯 Mission
+      <div class="reveal">Build legacy through simulation, storytelling, and cybersecurity mastery.</div>
+    </div>
+    <div class="nav-item">🚀 Projects
+      <div class="reveal">
+        <ul>
+          <li><strong>Mycroft + Ubuntu:</strong> Voice assistant deployed with instructions.</li>
+          <li><strong>Red Team Simulation:</strong> <a href="red-team.html">Permission-based roadmap</a>.</li>
+          <li><strong>slimmOS (Akkorokamui):</strong> Mythic OS branding, lightly referenced.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav-item">🔐 Security+ Sprint
+      <div class="reveal">
+        Structured study sprint with daily breakdowns, mock exams, and reflection logs.<br>
+        <a href="security-plan.html">View full plan</a>
+      </div>
+    </div>
+    <div class="nav-item">🦊 Statement
+      <div class="reveal">Fox energy: strategic, adaptive, and always iterating. Every project is a living simulation.</div>
+    </div>
+  </div>
+  <footer>© CyberSlimm 2025</footer>
 </body>
 </html>
