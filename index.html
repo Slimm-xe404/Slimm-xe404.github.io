@@ -4,70 +4,109 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CyberSlimm — Assimilation Stimulation</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #0b0c10;
+      color: #66fcf1;
+      text-align: center;
+    }
+    header {
+      padding: 60px 20px;
+      font-size: 2em;
+      letter-spacing: 2px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    nav button {
+      background: none;
+      border: 1px solid #66fcf1;
+      color: #66fcf1;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    nav button:hover {
+      background-color: #1f2833;
+    }
+    section {
+      display: none;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      padding: 20px;
+      border: 1px solid #45a29e;
+      background-color: #1f2833;
+    }
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #45a29e;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>CyberSlimm</h1>
-    <p>Assimilation Stimulation</p>
-  </header>
-
+  <header>CyberSlimm — Assimilation Stimulation</header>
   <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#mission">Mission</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#security">Security+ Sprint</a></li>
-      <li><a href="#redteam">Red Team</a></li>
-      <li><a href="#slimmos">slimmOS</a></li>
-      <li><a href="#statement">Statement</a></li>
-    </ul>
+    <button onclick="reveal('about')">About</button>
+    <button onclick="reveal('mission')">Mission</button>
+    <button onclick="reveal('projects')">Projects</button>
+    <button onclick="reveal('security')">Security+ Sprint</button>
+    <button onclick="reveal('redteam')">Red Team</button>
+    <button onclick="reveal('slimmos')">slimmOS</button>
+    <button onclick="reveal('statement')">Statement</button>
   </nav>
 
-  <main>
-    <section id="about">
-      <h2>🧠 About</h2>
-      <p>CyberSlimm is a mythic simulation of adaptive strategy, ethical hacking, and creative rigor.</p>
-    </section>
+  <section id="about">
+    <h2>🧠 About</h2>
+    <p>CyberSlimm is a mythic simulation of adaptive strategy, ethical hacking, and creative rigor.</p>
+  </section>
 
-    <section id="mission">
-      <h2>🎯 Mission</h2>
-      <p>To build legacy through simulation, storytelling, and cybersecurity mastery.</p>
-    </section>
+  <section id="mission">
+    <h2>🎯 Mission</h2>
+    <p>To build legacy through simulation, storytelling, and cybersecurity mastery.</p>
+  </section>
 
-    <section id="projects">
-      <h2>🚀 Project Highlights</h2>
-      <ul>
-        <li><a href="mycroft.html">Mycroft + Ubuntu Integration</a></li>
-        <li><a href="red-team.html">Red Team Simulation</a></li>
-        <li><a href="slimmOS.html">slimmOS (Akkorokamui)</a></li>
-      </ul>
-    </section>
+  <section id="projects">
+    <h2>🚀 Project Highlights</h2>
+    <ul>
+      <li>Mycroft + Ubuntu Integration</li>
+      <li>Red Team Simulation</li>
+      <li>slimmOS (Akkorokamui)</li>
+    </ul>
+  </section>
 
-    <section id="security">
-      <h2>🔐 Security+ Sprint</h2>
-      <p>Documented prep strategy and sprint breakdown for certification mastery.</p>
-    </section>
+  <section id="security">
+    <h2>🔐 Security+ Sprint</h2>
+    <p>Documented prep strategy and sprint breakdown for certification mastery.</p>
+  </section>
 
-    <section id="redteam">
-      <h2>🕵️ Red Team Simulation</h2>
-      <p>Permission-based threat modeling and ethical engagement roadmap.</p>
-    </section>
+  <section id="redteam">
+    <h2>🕵️ Red Team Simulation</h2>
+    <p>Permission-based threat modeling and ethical engagement roadmap.</p>
+  </section>
 
-    <section id="slimmos">
-      <h2>🐙 slimmOS (Akkorokamui)</h2>
-      <img src="images/sigil.png" alt="slimmOS Sigil" width="200" />
-      <p>Ongoing OS project—referenced lightly, never exposed. Mythic branding and modular design.</p>
-    </section>
+  <section id="slimmos">
+    <h2>🐙 slimmOS (Akkorokamui)</h2>
+    <p>Ongoing OS project—referenced lightly, never exposed. Mythic branding and modular design.</p>
+  </section>
 
-    <section id="statement">
-      <h2>🦊 Statement</h2>
-      <p>Fox energy: strategic, adaptive, and always iterating. Every project is a living simulation.</p>
-    </section>
-  </main>
+  <section id="statement">
+    <h2>🦊 Statement</h2>
+    <p>Fox energy: strategic, adaptive, and always iterating. Every project is a living simulation.</p>
+  </section>
 
-  <footer>
-    <p>© CyberSlimm 2025</p>
-  </footer>
+  <footer>© CyberSlimm 2025</footer>
+
+  <script>
+    function reveal(id) {
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
 </body>
 </html>
